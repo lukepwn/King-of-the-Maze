@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
 {
-
+    private Animator animator;
     private bool facingRight = true;
     public float speed = 5f;
     //public float jumpforce = 5f;
     public Vector2 move;
     private Rigidbody2D rb;
-    private Animator animator;
+
     private SpriteRenderer sprite;
 
 
@@ -18,8 +18,8 @@ public class MainCharacter : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,6 @@ public class MainCharacter : MonoBehaviour
     void FixedUpdate()
     {
         InputMovement();
-        AnimationMovement();
         SpriteDirection();
     }
 
@@ -58,29 +57,6 @@ public class MainCharacter : MonoBehaviour
                 transform.Rotate(new Vector3(0, 180, 0));
             }
 
-    }
-    void AnimationMovement()
-    {
-        // if no keys are being press (VELOCITY = 0), then play idle 
-        // if press x, play attack animation 
-
-        // look up advanced if statements later
-
-        // if (move = 0 )
-        // {
-        //     animator.setBool("")
-        // }
-
-
-        if (Input.GetKey(KeyCode.X))
-        {
-            animator.SetBool("ATTACK", true);
-        }
-
-        else
-        {
-            animator.SetBool("ATTACK", false);
-        }
     }
 
 

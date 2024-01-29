@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        character = GetComponent<CharacterInfo>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,10 @@ public class PlayerCombat : MonoBehaviour
         {
             animator.SetBool("ATTACK", true);
 
+        }
+        else
+        {
+            animator.SetBool("ATTACK", false);
         }
     }
 
