@@ -22,7 +22,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetMouseButton(0))
         {
             animator.SetBool("ATTACK", true);
 

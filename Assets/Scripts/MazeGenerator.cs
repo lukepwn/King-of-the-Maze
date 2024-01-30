@@ -46,7 +46,7 @@ public class MazeGenerator : MonoBehaviour
     {
         for (int pov_x = -(fieldOfVisionWidth / 2); pov_x <= fieldOfVisionWidth / 2; pov_x++)
         {
-            for (int pov_y = -(fieldOfVisionWidth / 2); pov_y <= fieldOfVisionWidth / 2; pov_y++)
+            for (int pov_y = -(fieldOfVisionHeight / 2); pov_y <= fieldOfVisionHeight / 2; pov_y++)
             {
                 int tileToUpdateX = CalculatePositionOnAxis(playerTilePosition.x + pov_x, true);
                 int tileToUpdateY = CalculatePositionOnAxis(playerTilePosition.y + pov_y, false);

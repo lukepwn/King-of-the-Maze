@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private int damage = 1;
-    [SerializeField] private int maxHp = 100;
-    public int currentHp = 100;
+    [SerializeField] private int currentHp = 100;
     private Rigidbody2D rb;
     private GameObject targetGameobject;
     public float speed = 2f;
